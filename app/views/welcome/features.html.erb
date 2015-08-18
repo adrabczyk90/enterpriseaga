@@ -6,19 +6,39 @@
 annual leave. A separate request form must be submitted for each block of leave requested.
 All requests are considered based on existing leave requests received from all employees, work
   commitments and minimum staffing levels required.</p>
-<FORM ACTION="..." Method="get">
-First Name	<input type="text" value="" name="txtFName" size="24"><br>
-Last Name	<input type="text" value="" name="txtLName" size="24"><br>
-Date of Birth	<input type="text" value="" name="txtFName" size="24"><br>
-Gender	Male <input type="radio" value="male" checked name="mf">
-Female <input type="radio" value="female" name="mf"><br>
-Email	<input type="text" value="" name="txtFName" size="24"><br>
-Address	<br><textarea rows="4" name="S2" cols="20"></textarea><br>
-I wish to request leave from my annual entitlement as follows:<br>
-My proposed leave dates: <br>	<textarea rows="4" name="S2" cols="20"></textarea><br>
-Total number of workings days is:	<br> <textarea rows="4" name="S2" cols="20"></textarea><br>
-<input type="submit" value="Submit" <a href="mailto:adrabczyk90@gmail.com">
-<INPUT TYPE="reset" value="Clear All">
-</FORM>
+
+  <%= form_for :article, url: articles_path do |f| %>
+  
+  First Name<br>
+  <p>
+    <%= f.text_field :title %>
+  </p>
+   Second Name<br>
+  <p>
+    <%= f.text_field :title1 %>
+  </p>
+  Date of birth<br>
+   <p>
+     <%= f.text_field :title2 %>
+  </p>
+   Email<br>
+  <p>
+    <%= f.text_field :title3 %>
+  </p>
+ <p>
+    Address<br>
+    <%= f.text_area :text1 %>
+  </p>
+  <p>
+   I wish to request leave from my annual entitlement as follows:<br>
+    My proposed leave dates: <br>
+    <%= f.text_area :text2 %>
+  </p>
+  Total number of workings days is:	<br>
+ <%= f.text_area :text3 %>
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
   
   

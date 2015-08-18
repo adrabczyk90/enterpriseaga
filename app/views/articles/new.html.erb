@@ -1,19 +1,37 @@
 <h1>New Article</h1>
 
-<%= form_for :article, url: articles_path do |f| %>
+  <%= form_for :article, url: articles_path do |f| %>
 
-<%= form_for :article do |f| %>
+  First Name<br>
   <p>
-    <%= f.label :title %><br>
-    <%= f.text_field :title %>
+    <%= f.text_field :title1 %>
   </p>
- 
+   Second Name<br>
   <p>
-    <%= f.label :text %><br>
-    <%= f.text_area :text %>
+    <%= f.text_field :title2 %>
   </p>
- 
+  Date of birth<br>
+   <p>
+     <%= f.text_field :title3 %>
+  </p>
+   Email<br>
+  <p>
+    <%= f.text_field :title4 %>
+  </p>
+ <p>
+    Address<br>
+    <%= f.text_area :text1 %>
+  </p>
+  <p>
+   I wish to request leave from my annual entitlement as follows:<br>
+    My proposed leave dates: <br>
+    <%= f.text_area :text2 %>
+  </p>
+  Total number of workings days is:	<br>
+ <%= f.text_area :text3 %>
   <p>
     <%= f.submit %>
   </p>
+
+
 <% end %>
